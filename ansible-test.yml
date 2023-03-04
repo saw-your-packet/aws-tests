@@ -1,6 +1,11 @@
 ---
-  - name: Check the remote host uptime
+  - name: "Playing with Ansible and Git"
     hosts: localhost
+    connection: local 
     tasks:
-      - name: Execute the Uptime command over Command module
-        command: "echo 'it works';echo 'test' > /tmp/a.txt"
+
+    - name: "just execute a ls -lrt command"
+      shell: "ls -lrt"
+      register: "output"
+
+    - debug: var=output.stdout_lines
