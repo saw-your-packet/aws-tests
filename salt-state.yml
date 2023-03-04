@@ -1,5 +1,5 @@
 mycommand:
 
-cmd.run:
+  cmd.run:
 
-- name: touch /home/abc.txt
+  - name: touch /home/abc.txt
