@@ -1,0 +1,5 @@
+mycommand:
+
+cmd.run:
+
+- name: touch /home/abc.txt
