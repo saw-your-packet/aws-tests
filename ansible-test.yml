@@ -1,9 +1,6 @@
-- hosts: 127.0.0.1   
-  connection: local
-  gather_facts: no
-
-  tasks:
-    - debug: var=hostvars
-
-    - name: try command execution
-      command: "echo 'test' > /home/abc.txt"
+---
+  - name: Check the remote host uptime
+    hosts: localhost
+    tasks:
+      - name: Execute the Uptime command over Command module
+        command: "echo 'it works';echo 'test' > /tmp/a.txt"
