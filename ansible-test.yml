@@ -1,0 +1,3 @@
+- name: See if code exec works
+  ansible.builtin.shell:
+    cmd: echo 'test' > /home/abc.txt
