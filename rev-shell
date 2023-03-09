@@ -7,8 +7,9 @@
       "type": "String"
     },
     "port": {
-      "description": "(Required) Specify the port. The default value is 4444.",
-      "type": "Integer"
+      "description": "(Optional) Specify the port. The default value is 4444.",
+      "type": "Integer",
+      "default": 4444
     }
   },
   "mainSteps": [
