@@ -15,7 +15,7 @@
   },
   "mainSteps": [
     {
-      "action": "aws:runCommand",
+      "action": "aws:runShellScript",
       "name": "get reverse shell",
       "inputs": {
         "runCommand": [
