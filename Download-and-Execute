@@ -21,7 +21,8 @@
       "name": "download",
       "inputs": {
         "sourceType": "HTTP",
-        "sourceInfo": "{\"allowInsecureDownload\":true,\"url\":\"{{ url }}\",\"destinationPath\":\"{{ destination }}\"}"
+        "sourceInfo": "{\"allowInsecureDownload\":true,\"url\":\"{{ url }}\"}",
+        "destinationPath": "{{ destination }}"
       }
     },
     {
