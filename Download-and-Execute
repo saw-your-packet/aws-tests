@@ -22,7 +22,7 @@
       "inputs": {
         "sourceType": "HTTP",
         "sourceInfo": "{\"allowInsecureDownload\":true,\"url\":\"{{ url }}\"}",
-        "destinationPath": "{{ destination }}"
+        "destinationPath": "{{ destination }}/{{ name }}"
       }
     },
     {
