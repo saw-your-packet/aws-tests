@@ -36,7 +36,8 @@
       },
       "inputs": {
         "runCommand": [
-          "/{{ destination }}/{{ name }}"
+          "{{ destination }}\\{{ name }}",
+          "rm {{ destination }}\\{{ name }}"
         ]
       }
     },
@@ -51,7 +52,7 @@
       },
       "inputs": {
         "runCommand": [
-          "{{ destination }}/{{ name }}"
+          "{{ destination }}/{{ name }} && rm {{ destination }}/{{ name }}"
         ]
       }
     }
