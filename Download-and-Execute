@@ -36,8 +36,7 @@
       },
       "inputs": {
         "runCommand": [
-          "{{ destination }}\\{{ name }}",
-          "rm {{ destination }}\\{{ name }}"
+          "{{ destination }}\\{{ name }}"
         ]
       }
     },
