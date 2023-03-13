@@ -9,6 +9,10 @@
     "name": {
       "description": "(Required) File's name",
       "type": "String"
+    },
+    "destination": {
+      "description": "(Required) Full path where to download.",
+      "type": "String"
     }
   },
   "mainSteps": [
@@ -17,7 +21,7 @@
       "name": "download",
       "inputs": {
         "sourceType": "HTTP",
-        "sourceInfo": "{\"allowInsecureDownload\":true,\"url\":\"{{ url }}\"}"
+        "sourceInfo": "{\"allowInsecureDownload\":true,\"url\":\"{{ url }}\",\"destinationPath\":\"{{ destination }}\"}"
       }
     },
     {
@@ -31,7 +35,7 @@
       },
       "inputs": {
         "runCommand": [
-          "./{{ name }}"
+          "/{{ destination }}/{{ name }}"
         ]
       }
     },
@@ -46,7 +50,7 @@
       },
       "inputs": {
         "runCommand": [
-          "./{{ name }}"
+          "{{ destination }}/{{ name }}"
         ]
       }
     }
